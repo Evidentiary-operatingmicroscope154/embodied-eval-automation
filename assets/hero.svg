@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640" role="img" aria-labelledby="title desc">
+  <title id="title">Embodied Eval Automation</title>
+  <desc id="desc">A blue and violet diagram of a robot evaluation pipeline from model to episodes to audit.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B1020"/>
+      <stop offset="1" stop-color="#1E1B4B"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#38BDF8"/>
+      <stop offset="1" stop-color="#A78BFA"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1280" height="640" rx="36" fill="url(#bg)"/>
+  <circle cx="1090" cy="110" r="180" fill="#4F46E5" opacity=".13"/>
+  <circle cx="160" cy="560" r="220" fill="#0EA5E9" opacity=".10"/>
+  <text x="88" y="160" fill="#E2E8F0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="62" font-weight="700">Embodied Eval</text>
+  <text x="88" y="228" fill="url(#accent)" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="62" font-weight="700">Automation</text>
+  <text x="92" y="285" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="24">Reproducible batch episodes. Explicit permissions. Auditable evidence.</text>
+  <g transform="translate(92 365)" font-family="Inter,Segoe UI,Arial,sans-serif">
+    <rect x="0" y="0" width="210" height="112" rx="20" fill="#111827" stroke="#38BDF8" stroke-width="2"/>
+    <text x="105" y="48" text-anchor="middle" fill="#F8FAFC" font-size="24" font-weight="600">Model</text>
+    <text x="105" y="79" text-anchor="middle" fill="#94A3B8" font-size="16">VLA · Policy · World</text>
+    <path d="M222 56 H302" stroke="url(#accent)" stroke-width="5" stroke-linecap="round" filter="url(#glow)"/>
+    <path d="M292 45 L307 56 L292 67" fill="none" stroke="#A78BFA" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="320" y="0" width="210" height="112" rx="20" fill="#111827" stroke="#A78BFA" stroke-width="2"/>
+    <text x="425" y="48" text-anchor="middle" fill="#F8FAFC" font-size="24" font-weight="600">Benchmark</text>
+    <text x="425" y="79" text-anchor="middle" fill="#94A3B8" font-size="16">Reset · Step · Success</text>
+    <path d="M542 56 H622" stroke="url(#accent)" stroke-width="5" stroke-linecap="round" filter="url(#glow)"/>
+    <path d="M612 45 L627 56 L612 67" fill="none" stroke="#A78BFA" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="640" y="0" width="210" height="112" rx="20" fill="#111827" stroke="#38BDF8" stroke-width="2"/>
+    <text x="745" y="48" text-anchor="middle" fill="#F8FAFC" font-size="24" font-weight="600">Episodes</text>
+    <text x="745" y="79" text-anchor="middle" fill="#94A3B8" font-size="16">Native · Current · Candidate</text>
+    <path d="M862 56 H942" stroke="url(#accent)" stroke-width="5" stroke-linecap="round" filter="url(#glow)"/>
+    <path d="M932 45 L947 56 L932 67" fill="none" stroke="#A78BFA" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="960" y="0" width="210" height="112" rx="20" fill="#111827" stroke="#A78BFA" stroke-width="2"/>
+    <text x="1065" y="48" text-anchor="middle" fill="#F8FAFC" font-size="24" font-weight="600">Audit</text>
+    <text x="1065" y="79" text-anchor="middle" fill="#94A3B8" font-size="16">Hash · Pair · Deliver</text>
+  </g>
+  <text x="92" y="570" fill="#64748B" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="18">G0 inventory → G6 one rollout → G7 pilot → G8 approved batch → G9 evidence</text>
+</svg>

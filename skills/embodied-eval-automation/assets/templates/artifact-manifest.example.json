@@ -1,0 +1,17 @@
+{
+  "schema_version": "artifact-manifest/v1",
+  "run_id": "example-run",
+  "artifacts": [
+    {
+      "artifact_id": "model-source",
+      "kind": "git-source",
+      "origin": "https://example.invalid/model.git",
+      "revision": "immutable-commit",
+      "relative_path": "sources/model",
+      "size_bytes": 0,
+      "sha256": "",
+      "license": "review-required",
+      "verification": "pending"
+    }
+  ]
+}

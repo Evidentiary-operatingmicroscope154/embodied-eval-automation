@@ -1,0 +1,55 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Editors and OS
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Credentials and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+credentials.json
+secrets.*
+
+# Model, dataset, and run artifacts
+*.ckpt
+*.safetensors
+*.pt
+*.pth
+*.onnx
+*.npy
+*.npz
+*.h5
+*.hdf5
+*.mp4
+*.mkv
+*.tar
+*.tar.gz
+*.zip
+runs/
+artifacts/
+checkpoints/
+datasets/
+caches/
+downloads/
+*.part
+*.partial
+
+# Logs
+*.log
+*.out
+*.err
+!log/file_description.md

@@ -1,0 +1,22 @@
+{
+  "approval_id": "approval-example",
+  "run_id": "example-run",
+  "approved_at": "2026-01-01T00:00:00Z",
+  "category": "read",
+  "targets": [
+    "example-host:/approved/data/root"
+  ],
+  "allowed_actions": [
+    "list files",
+    "read versions",
+    "inspect disk and GPU status"
+  ],
+  "forbidden_actions": [
+    "install",
+    "upload",
+    "delete",
+    "start paid compute"
+  ],
+  "expires_when": "G0 completes",
+  "evidence": "user approval reference without secrets"
+}

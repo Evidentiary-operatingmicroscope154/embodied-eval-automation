@@ -1,0 +1,22 @@
+{
+  "schema_version": "episode-manifest/v1",
+  "episode_id": "example-episode",
+  "rollout_id": "example-rollout",
+  "representation_id": "official-native",
+  "derived_from": null,
+  "pair_key": "benchmark/suite/task=0/init=0/seed=0",
+  "initial_state_sha256": "",
+  "transition_count": 0,
+  "observation_count": 1,
+  "policy_query_count": 0,
+  "capabilities": {},
+  "quality_flags": [],
+  "files": [
+    {
+      "relative_path": "summary.json",
+      "size_bytes": 0,
+      "sha256": "",
+      "provenance": "adapter_computed"
+    }
+  ]
+}

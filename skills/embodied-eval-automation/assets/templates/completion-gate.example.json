@@ -1,0 +1,23 @@
+{
+  "schema_version": "completion-gate/v1",
+  "run_id": "example-run",
+  "status": "incomplete",
+  "expected_episode_count": 0,
+  "delivered_episode_count": 0,
+  "expected_pair_count": 0,
+  "validated_pair_count": 0,
+  "missing_ids": [],
+  "duplicate_ids": [],
+  "corrupt_ids": [],
+  "allowed_exclusions": [],
+  "checks": {
+    "source_manifests": false,
+    "artifact_hashes": false,
+    "schema": false,
+    "representation_lineage": false,
+    "pair_initial_state": false,
+    "transfer_receipts": false,
+    "static_visualizations": false,
+    "reproduction_instructions": false
+  }
+}

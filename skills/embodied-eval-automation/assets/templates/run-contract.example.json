@@ -1,0 +1,65 @@
+{
+  "schema_version": "embodied-run-contract/v1",
+  "run_id": "example-run",
+  "created_at": "2026-01-01T00:00:00Z",
+  "mode": "online-closed-loop",
+  "model": {
+    "name": "example-model",
+    "role": "vla",
+    "source_revision": "",
+    "checkpoint_revision": ""
+  },
+  "benchmark": {
+    "name": "example-benchmark",
+    "source_revision": ""
+  },
+  "scope": {
+    "suites": [],
+    "tasks": [],
+    "init_states": [],
+    "seeds": [],
+    "repetitions": 1,
+    "expected_episode_count": 0,
+    "expected_pair_count": 0
+  },
+  "representations": [
+    "official-native",
+    "embodied-eval-current",
+    "embodied-eval-candidate"
+  ],
+  "resources": {
+    "gpu_ids": [],
+    "max_concurrency": 1,
+    "remote_disk_pause_gib": 25,
+    "local_disk_pause_gib": 25,
+    "cost_limit": null
+  },
+  "permissions": {
+    "read": "approved",
+    "write": "not_requested",
+    "install": "not_requested",
+    "download": "not_requested",
+    "upload": "not_requested",
+    "compute": "not_requested",
+    "permission_change": "not_requested",
+    "delete": "not_requested",
+    "git": "not_requested",
+    "notify": "not_requested"
+  },
+  "completion": {
+    "required_gates": [
+      "G0",
+      "G1",
+      "G2",
+      "G3",
+      "G4",
+      "G5",
+      "G6",
+      "G7",
+      "G8",
+      "G9"
+    ],
+    "allowed_failures": [],
+    "deliverables": []
+  }
+}

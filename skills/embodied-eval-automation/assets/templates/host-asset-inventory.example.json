@@ -1,0 +1,28 @@
+{
+  "schema_version": "host-asset-inventory/v1",
+  "run_id": "example-run",
+  "host": {
+    "label": "gpu-worker",
+    "os": "linux",
+    "gpu": [],
+    "memory_bytes": 0,
+    "data_free_bytes": 0
+  },
+  "assets": [
+    {
+      "kind": "benchmark_env",
+      "path": "/approved/data/envs/benchmark",
+      "size_bytes": 0,
+      "purpose": "benchmark runtime",
+      "version_evidence": {
+        "commit": "",
+        "revision": "",
+        "sha256": ""
+      },
+      "active_process": false,
+      "evidence_level": "metadata",
+      "candidate_for_reuse": true,
+      "cleanup_recommendation": "keep"
+    }
+  ]
+}

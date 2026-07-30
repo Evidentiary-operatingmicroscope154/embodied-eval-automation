@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: "If this workflow helps your research, please cite the software release."
+title: "Embodied Eval Automation"
+type: software
+authors:
+  - name: "Embodied Eval Automation contributors"
+version: 0.1.0
+date-released: 2026-07-30
+license: MIT
+keywords:
+  - embodied AI
+  - robot learning
+  - evaluation
+  - batch episodes
+  - reproducibility

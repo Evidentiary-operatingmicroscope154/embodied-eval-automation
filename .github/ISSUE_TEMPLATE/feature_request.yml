@@ -1,0 +1,39 @@
+name: Feature request
+description: Propose a reusable workflow, provider, adapter, schema, or validator improvement.
+title: "[Feature]: "
+labels:
+  - enhancement
+body:
+  - type: textarea
+    id: scenario
+    attributes:
+      label: User scenario
+      description: What model + benchmark or infrastructure workflow should become easier?
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Current failure mode
+      description: What is unsafe, ambiguous, repetitive, or not auditable today?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behavior
+      description: Include expected inputs, outputs, stop conditions, and permission boundaries.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Public evidence or official references
+      description: Add links without copying restricted documentation.
+  - type: checkboxes
+    id: scope
+    attributes:
+      label: Scope
+      options:
+        - label: The proposal is provider-neutral or clearly isolated to a provider reference.
+        - label: The proposal does not require committing weights, datasets, credentials, or private run data.

@@ -1,0 +1,160 @@
+# File creation log
+
+## 2026-07-30 14:15:31 +08:00
+
+- File: `skills/embodied-eval-automation/SKILL.md`
+  - Content: Added an explicit rule against inferring run storage from the skill location or current working directory.
+  - Reason: Updated after an independent forward test exposed a portability failure.
+- File: `skills/embodied-eval-automation/references/onboarding-and-permissions.md`
+  - Content: Added a read-only capacity-discovery and workspace-choice procedure for users who do not know where to store data.
+  - Reason: Updated to make workspace confirmation provider-neutral and evidence-based.
+
+## 2026-07-30 13:48:31 +08:00
+
+- File: `.codex-plugin/plugin.json`
+  - Content: Codex skills-only plugin identity, version, discovery metadata, and skill path.
+  - Reason: Created to package the standalone skill according to the current Codex plugin distribution structure.
+- File: `skills/embodied-eval-automation/SKILL.md`
+  - Content: Provider-neutral G0-G9 workflow for secure, staged, auditable batch episode collection.
+  - Reason: Created as the installable core requested for reuse outside the original project.
+- File: `skills/embodied-eval-automation/agents/openai.yaml`
+  - Content: User-facing skill name, summary, and default invocation prompt.
+  - Reason: Created by the official skill scaffold for Codex discovery and UI metadata.
+- File: `skills/embodied-eval-automation/LICENSE.txt`
+  - Content: MIT license for independent redistribution of the skill directory.
+  - Reason: Created so the skill remains licensed when installed separately from the repository.
+
+- File: `skills/embodied-eval-automation/references/onboarding-and-permissions.md`
+  - Content: Intake questions, workspace confirmation, approval categories, and receipt format.
+  - Reason: Created to generalize permission acquisition and prevent secret collection.
+- File: `skills/embodied-eval-automation/references/provider-connections.md`
+  - Content: Safe SSH, cloud, GitHub, Hugging Face, gated-access, and download fallback workflows.
+  - Reason: Created from the user request for reusable connection and authorization guidance.
+- File: `skills/embodied-eval-automation/references/asset-reuse-and-environments.md`
+  - Content: Existing-asset inventory, reuse evidence, environment isolation, and failure classification.
+  - Reason: Created to generalize lessons from reusing an existing benchmark environment.
+- File: `skills/embodied-eval-automation/references/workflow-and-gates.md`
+  - Content: G0-G9 evidence table, scale gates, technical-report requirements, and completion definition.
+  - Reason: Created to make stage expansion and success criteria deterministic.
+- File: `skills/embodied-eval-automation/references/episode-representations.md`
+  - Content: Native/current/candidate episode views, provenance, pairing, and schema promotion rules.
+  - Reason: Created to preserve model-native outputs while supporting cross-model comparison.
+- File: `skills/embodied-eval-automation/references/adapter-contract.md`
+  - Content: Model, benchmark, loopback, writer, controller, summary, and validator interfaces.
+  - Reason: Created to make new model-benchmark integrations implementable and testable.
+- File: `skills/embodied-eval-automation/references/monitoring-transfer-retention.md`
+  - Content: Supervisor/controller/periodic-checker roles, lifecycle, transfer, disk, and pruning rules.
+  - Reason: Created to make long batch runs resumable and auditable.
+- File: `skills/embodied-eval-automation/references/security-and-approvals.md`
+  - Content: Credential, browser, cloud-cost, approval, notification, public-delivery, and incident rules.
+  - Reason: Created to prevent authorization drift and credential leakage.
+
+- File: `skills/embodied-eval-automation/scripts/create_run_workspace.py`
+  - Content: Standard-library generator for a bounded run directory, contract, and approval receipt.
+  - Reason: Created to avoid repeatedly hand-building inconsistent run layouts.
+- File: `skills/embodied-eval-automation/scripts/validate_run_contract.py`
+  - Content: Standard-library contract and secret-like-key validator.
+  - Reason: Created to catch incomplete scope/permission metadata before execution.
+- File: `skills/embodied-eval-automation/scripts/validate_repository.py`
+  - Content: Standalone repository, manifest, reference, template, UTF-8, path, and secret scanner.
+  - Reason: Created for local and continuous-integration quality gates.
+
+- File: `skills/embodied-eval-automation/assets/templates/intake-questionnaire.md`
+  - Content: Reusable model, benchmark, workspace, access, permission, resource, and completion intake.
+  - Reason: Created to standardize the first user conversation.
+- File: `skills/embodied-eval-automation/assets/templates/approval-receipt.example.json`
+  - Content: Bounded approval receipt example.
+  - Reason: Created to make high-impact authorization auditable.
+- File: `skills/embodied-eval-automation/assets/templates/host-asset-inventory.example.json`
+  - Content: Host capability and reusable-asset inventory example.
+  - Reason: Created to support G0 server inspection.
+- File: `skills/embodied-eval-automation/assets/templates/reuse-compatibility-matrix.example.json`
+  - Content: Requirement-to-asset reuse decision example.
+  - Reason: Created to support evidence-backed G1 reuse decisions.
+- File: `skills/embodied-eval-automation/assets/templates/artifact-manifest.example.json`
+  - Content: Source/checkpoint/dataset artifact provenance example.
+  - Reason: Created to pin immutable resource identity.
+- File: `skills/embodied-eval-automation/assets/templates/run-contract.example.json`
+  - Content: Scope, resources, permissions, representations, and completion contract example.
+  - Reason: Created to freeze a run before installation or execution.
+- File: `skills/embodied-eval-automation/assets/templates/episode-manifest.example.json`
+  - Content: Rollout/representation lineage and file hash example.
+  - Reason: Created to support episode-level provenance and validation.
+- File: `skills/embodied-eval-automation/assets/templates/completion-gate.example.json`
+  - Content: Expected/delivered counts and final validation check example.
+  - Reason: Created to prevent premature completion claims.
+- File: `skills/embodied-eval-automation/assets/templates/periodic-monitor.example.md`
+  - Content: Recurring monitor inputs, anomaly conditions, and completion behavior.
+  - Reason: Created to generalize periodic Codex monitoring for long jobs.
+
+- File: `README.md`
+  - Content: English overview, value proposition, workflow, installation, outputs, security, and validation.
+  - Reason: Created as the primary global GitHub landing page.
+- File: `README.zh-CN.md`
+  - Content: Chinese overview and usage guide.
+  - Reason: Created to retain a complete Chinese entry point for the project owner and community.
+- File: `LICENSE`
+  - Content: Repository-level MIT license.
+  - Reason: Created to make public reuse legally explicit.
+- File: `SECURITY.md`
+  - Content: Vulnerability reporting, credential handling, high-impact action, and data rules.
+  - Reason: Created for safe public contribution and deployment.
+- File: `PRIVACY.md`
+  - Content: No-telemetry statement, processed-data categories, third-party services, and user duties.
+  - Reason: Created because episode collection may involve sensitive observations and external providers.
+- File: `CONTRIBUTING.md`
+  - Content: Contribution scope, test commands, pull-request, commit, and language guidance.
+  - Reason: Created to help outside contributors improve the skill safely.
+- File: `CODE_OF_CONDUCT.md`
+  - Content: Community behavior and private reporting expectations.
+  - Reason: Created to meet public-repository community standards.
+- File: `SUPPORT.md`
+  - Content: Routing for discussions, issues, security reports, and redaction expectations.
+  - Reason: Created to make community support channels clear.
+- File: `CHANGELOG.md`
+  - Content: Initial 0.1.0 release history and Unreleased section.
+  - Reason: Created to support future tagged releases.
+- File: `CITATION.cff`
+  - Content: Software citation metadata for research users.
+  - Reason: Created to support scholarly reuse and attribution.
+- File: `AGENTS.md`
+  - Content: Repository maintenance, portability, security, logging, and validation rules.
+  - Reason: Created to guide future coding agents and contributors.
+- File: `.gitignore`
+  - Content: Exclusions for credentials, environments, models, datasets, episodes, media, archives, and logs.
+  - Reason: Created to reduce accidental publication of large or sensitive artifacts.
+- File: `.gitattributes`
+  - Content: Cross-platform text and line-ending normalization.
+  - Reason: Created for reproducible Windows/Linux collaboration.
+- File: `assets/hero.svg`
+  - Content: Repository banner showing model-to-benchmark-to-episode-to-audit flow.
+  - Reason: Created to improve GitHub readability and discoverability.
+- File: `docs/publishing-checklist.md`
+  - Content: First-push, metadata, release, plugin submission, and discoverability checklist.
+  - Reason: Created to prepare the standalone package for public GitHub publication.
+
+- File: `examples/libero-policy-pilot.md`
+  - Content: Redacted policy + LIBERO pilot request and expected skill behavior.
+  - Reason: Created as a concrete example derived from the completed project experience.
+- File: `examples/world-model-benchmark-pilot.md`
+  - Content: World-model prediction and benchmark observation separation example.
+  - Reason: Created to demonstrate generalization beyond action-only policies.
+- File: `tests/test_skill_scripts.py`
+  - Content: Unit tests for workspace creation, overwrite refusal, contract security, and repository validation.
+  - Reason: Created to verify deterministic bundled scripts and package integrity.
+
+- File: `.github/ISSUE_TEMPLATE/bug_report.yml`
+  - Content: Redaction-aware structured bug report.
+  - Reason: Created for safe and reproducible public bug intake.
+- File: `.github/ISSUE_TEMPLATE/feature_request.yml`
+  - Content: Structured feature proposal for providers, adapters, schemas, and workflows.
+  - Reason: Created to guide useful community contributions.
+- File: `.github/ISSUE_TEMPLATE/config.yml`
+  - Content: Issue-template configuration.
+  - Reason: Created to route issues through the structured forms.
+- File: `.github/pull_request_template.md`
+  - Content: Evidence, safety, and compatibility checklist for pull requests.
+  - Reason: Created to make reviews consistent.
+- File: `.github/workflows/validate-skill.yml`
+  - Content: Windows/Linux and Python 3.10/3.12 validation workflow.
+  - Reason: Created to catch portability and packaging regressions automatically.

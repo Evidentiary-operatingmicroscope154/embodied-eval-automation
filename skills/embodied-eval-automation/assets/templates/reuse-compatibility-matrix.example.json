@@ -1,0 +1,18 @@
+{
+  "schema_version": "reuse-compatibility-matrix/v1",
+  "run_id": "example-run",
+  "requirements": [
+    {
+      "requirement_id": "benchmark-runtime",
+      "official_requirement": "Pinned benchmark commit and passing reset/step smoke test",
+      "candidate_path": "/approved/data/envs/benchmark",
+      "decision": "reuse-readonly",
+      "evidence": [
+        "commit verified",
+        "runtime fingerprint recorded",
+        "headless reset/step passed"
+      ],
+      "risk": "Do not modify this shared environment"
+    }
+  ]
+}

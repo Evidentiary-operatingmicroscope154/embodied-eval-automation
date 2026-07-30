@@ -1,0 +1,4 @@
+interface:
+  display_name: "Embodied Eval Automation"
+  short_description: "Build auditable model-benchmark episode pipelines"
+  default_prompt: "Use $embodied-eval-automation to plan and run an auditable batch episode collection workflow."

@@ -1,0 +1,58 @@
+name: Bug report
+description: Report reproducible skill, validator, or packaging behavior.
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Remove credentials, private hosts, local user paths, proprietary data, and generated episode content before submitting.
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: Release tag or commit.
+      placeholder: v0.1.0
+    validations:
+      required: true
+  - type: dropdown
+    id: component
+    attributes:
+      label: Component
+      options:
+        - Skill activation or instructions
+        - Permission or connection workflow
+        - Asset reuse or environment workflow
+        - Episode representation or validation
+        - Monitoring, transfer, or retention
+        - Plugin packaging
+        - Repository validator or tests
+    validations:
+      required: true
+  - type: textarea
+    id: request
+    attributes:
+      label: Redacted request or reproduction
+      description: Include the smallest safe request, command, or fixture that reproduces the issue.
+    validations:
+      required: true
+  - type: textarea
+    id: observed
+    attributes:
+      label: Observed behavior
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety check
+      options:
+        - label: I removed secrets, private infrastructure, personal paths, and restricted artifacts.
+          required: true
